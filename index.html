@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025届通班毕业会</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #c8a87a;
+            --secondary-color: #a08e77;
+            --text-color: #3a3a3a;
+            --bg-color: #faf6f0;
+            --accent-color: #d4c5a3;
+            --gradient-start: #f8f3e9;
+            --gradient-end: #f0ecdf;
+        }
+
+        body {
+            font-family: 'Noto Serif SC', serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .header-decoration {
+            margin-bottom: -5px;
+            position: relative;
+            z-index: 2;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 10px 30px rgba(200, 168, 122, 0.15);
+            padding: 3rem 0;
+            margin: 1rem 1rem 3rem;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            border: 1px solid rgba(200, 168, 122, 0.1);
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(45deg, rgba(200, 168, 122, 0.05), rgba(212, 197, 163, 0.05)),
+                url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c8a87a' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            z-index: -1;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3.5rem;
+            font-weight: 700;
+            font-family: 'ZCOOL XiaoWei', serif;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+            position: relative;
+            letter-spacing: 2px;
+        }
+        
+        h1::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background: var(--primary-color);
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            color: var(--secondary-color);
+            margin: 1.5rem auto 2.5rem;
+            position: relative;
+            width: fit-content;
+            padding: 0 1rem;
+            font-weight: 500;
+        }
+        
+        .subtitle::before,
+        .subtitle::after {
+            content: '❀';
+            color: var(--accent-color);
+            display: inline-block;
+            margin: 0 10px;
+            opacity: 0.7;
+        }
+
+        .hero-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 1.5rem;
+            margin: 2.5rem auto 0.5rem;
+            max-width: 1000px;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 1.8rem 1.5rem;
+            border-radius: 18px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            border: 1px solid rgba(200, 168, 122, 0.1);
+            backdrop-filter: blur(10px);
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .info-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(200, 168, 122, 0.08), transparent);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(200, 168, 122, 0.2);
+        }
+
+        .info-card:hover::before {
+            opacity: 1;
+        }
+
+        .info-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        .info-card p {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--text-color);
+            margin: 0;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .info-card p::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background: var(--accent-color);
+            bottom: -2px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 1px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .info-card:hover p::after {
+            opacity: 1;
+        }
+
+        .content-section {
+            background: rgba(255, 255, 255, 0.85);
+            margin: 3.5rem 0;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(200, 168, 122, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(200, 168, 122, 0.1);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+        
+        .content-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+            opacity: 0.5;
+        }
+
+        .content-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(200, 168, 122, 0.15);
+        }
+        
+        /* 确保所有内容都可见的备份样式 */
+        .content-section {
+            opacity: 1 !important; /* 确保内容始终可见 */
+            transform: none;
+            transition: transform 0.5s ease, box-shadow 0.5s ease, opacity 0.5s ease;
+        }
+        
+        /* 为使用AOS的元素添加备份样式 */
+        [data-aos] {
+            transition-property: opacity, transform;
+            transition-timing-function: ease;
+            transition-duration: 0.8s;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            font-family: 'ZCOOL XiaoWei', serif;
+            letter-spacing: 1px;
+        }
+
+        h2::after {
+            content: '';
+            width: 70px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+            display: block;
+            margin: 0.8rem auto;
+            border-radius: 2px;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+            margin: 0 1rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+            border-radius: 1px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3.5rem;
+            padding-left: 2rem;
+            transition: all 0.5s ease;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.5rem;
+            top: 0.5rem;
+            width: 14px;
+            height: 14px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 4px rgba(200, 168, 122, 0.1);
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: -1.6rem;
+            top: 1rem;
+            width: 40px;
+            height: 1px;
+            background: var(--accent-color);
+            opacity: 0.6;
+        }
+
+        .timeline-item:hover::before {
+            transform: scale(1.2);
+            box-shadow: 0 0 0 6px rgba(200, 168, 122, 0.15);
+        }
+
+        .timeline-time {
+            display: inline-block;
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            margin-bottom: 0.7rem;
+            padding: 5px 12px;
+            background: rgba(200, 168, 122, 0.08);
+            border-radius: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .timeline-title {
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 0.7rem;
+            font-size: 1.2rem;
+        }
+
+        .timeline-desc {
+            color: #5d6d7e;
+            line-height: 1.7;
+        }
+
+        .timeline-poetry {
+            color: var(--secondary-color);
+            font-style: italic;
+            margin-top: 0.8rem;
+            font-size: 0.95rem;
+            padding-left: 1rem;
+            border-left: 2px solid rgba(200, 168, 122, 0.3);
+        }
+
+        .intro-text {
+            text-align: center;
+            font-size: 1.15rem;
+            line-height: 1.9;
+            color: #5d6d7e;
+            margin: 0 auto 2.5rem;
+            max-width: 800px;
+            position: relative;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+        }
+        
+        .intro-text::before,
+        .intro-text::after {
+            content: '"';
+            font-size: 4rem;
+            font-family: serif;
+            position: absolute;
+            color: rgba(200, 168, 122, 0.2);
+            line-height: 1;
+        }
+        
+        .intro-text::before {
+            top: 0.5rem;
+            left: 1rem;
+        }
+        
+        .intro-text::after {
+            bottom: -1.5rem;
+            right: 1rem;
+        }
+
+        .dress-code {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 18px;
+            margin: 2rem auto;
+            text-align: center;
+            max-width: 800px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(200, 168, 122, 0.2);
+        }
+        
+        .dress-code::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 70px;
+            height: 70px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+        
+        .dress-code::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            width: 120px;
+            height: 120px;
+            background: rgba(255, 255, 255, 0.07);
+            border-radius: 50%;
+        }
+
+        .dress-code h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+            position: relative;
+            display: inline-block;
+            font-weight: 500;
+        }
+        
+        /* 添加鼠标悬停效果 */
+        .content-section h2 {
+            transition: all 0.3s ease;
+        }
+        
+        .content-section:hover h2 {
+            transform: translateY(-3px);
+            text-shadow: 0 5px 15px rgba(200, 168, 122, 0.3);
+        }
+        
+        .timeline-item {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .timeline-item::before {
+            box-shadow: 0 0 0 4px rgba(200, 168, 122, 0.1), 0 0 10px rgba(200, 168, 122, 0.2);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .timeline-item:hover .timeline-title {
+            color: var(--primary-color);
+            transform: translateX(5px);
+            transition: all 0.3s ease;
+        }
+        
+        /* 添加动态背景效果 */
+        @keyframes gradientBg {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .conclusion {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--text-color);
+            font-weight: 500;
+            padding: 2.5rem 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .conclusion-quote {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-top: 2rem;
+            font-style: italic;
+            position: relative;
+            padding: 1.5rem 0;
+            line-height: 1.8;
+            letter-spacing: 1px;
+        }
+        
+        .conclusion-quote::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+        }
+        
+        .conclusion-quote::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+        }
+
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .floating-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(200, 168, 122, 0.08);
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .floating-circle:nth-child(1) {
+            width: 120px;
+            height: 120px;
+            top: 15%;
+            left: 8%;
+            animation-delay: 0s;
+            border: 1px solid rgba(200, 168, 122, 0.05);
+        }
+
+        .floating-circle:nth-child(2) {
+            width: 80px;
+            height: 80px;
+            top: 65%;
+            right: 12%;
+            animation-delay: 2s;
+            border: 1px solid rgba(200, 168, 122, 0.05);
+            backdrop-filter: blur(2px);
+        }
+
+        .floating-circle:nth-child(3) {
+            width: 150px;
+            height: 150px;
+            bottom: 18%;
+            left: 18%;
+            animation-delay: 4s;
+            opacity: 0.7;
+        }
+        
+        .floating-square {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: rgba(200, 168, 122, 0.05);
+            border: 1px solid rgba(200, 168, 122, 0.1);
+            animation: floatRotate 12s linear infinite;
+            border-radius: 5px;
+        }
+        
+        .floating-square:nth-child(4) {
+            top: 35%;
+            right: 25%;
+            animation-delay: 1s;
+        }
+        
+        .floating-square:nth-child(5) {
+            bottom: 40%;
+            left: 35%;
+            width: 30px;
+            height: 30px;
+            animation-delay: 3s;
+        }
+        
+        .floating-square:nth-child(6) {
+            top: 80%;
+            right: 35%;
+            width: 50px;
+            height: 50px;
+            animation-delay: 5s;
+            opacity: 0.5;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-30px) rotate(8deg);
+            }
+        }
+        
+        @keyframes floatRotate {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(180deg);
+            }
+            100% {
+                transform: translateY(0) rotate(360deg);
+            }
+        }
+
+        /* 添加毕业主题装饰元素样式 */
+        .decorative-element {
+            position: absolute;
+            opacity: 0.1;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .graduation-cap {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512' fill='%23c8a87a'%3E%3Cpath d='M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5v-2.9c0-30.9 25.1-56 56-56s56 25.1 56 56v28.5c0 25.3 18.3 45.8 40.5 45.8h67.4c13.3 0 24.1 10.8 24.1 24.1c0 13.3-10.8 24.1-24.1 24.1h-45.3c-8.6 0-16.6 4.6-20.9 12.1L176.6 459c-3.9 6.7-5.2 14.7-3.5 22.3s6.2 14.5 12.9 18.4l64 37.3c11.3 6.6 25.8 2.8 32.4-8.5l17.5-30.1c3.4-5.8 5.1-12.4 5.1-19.1V454c17.2-8.2 30.7-24.8 34.8-45.1c6.4-32 .9-71-20-99.5c-20.5-27.7-48.8-45.4-82.8-45.4H184c-13.3 0-24-10.7-24-24c0-13.3 10.7-24 24-24h50.5c20.8 0 41.3 8.3 56.2 23.2l51.3 51.3c11.3 11.3 28.2 14.7 43.4 8.5l47.3-18.9c14.1-5.6 23.4-19.2 23.4-34.3V142.6c0-7.8-3-15.2-8.5-20.7L401.5 74.7c-9.4-9.4-22-14.7-35.3-14.7H320zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48z'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.08;
+        }
+        
+        .graduation-cap:nth-child(1) {
+            top: 15%;
+            right: 10%;
+            transform: rotate(15deg);
+        }
+        
+        .graduation-cap:nth-child(2) {
+            bottom: 25%;
+            left: 8%;
+            width: 40px;
+            height: 40px;
+            transform: rotate(-20deg);
+        }
+        
+        .diploma {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512' fill='%23c8a87a'%3E%3Cpath d='M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM112 256H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16z'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.08;
+        }
+        
+        .diploma:nth-child(1) {
+            top: 40%;
+            right: 15%;
+            transform: rotate(10deg);
+        }
+        
+        .diploma:nth-child(2) {
+            bottom: 10%;
+            left: 20%;
+            width: 35px;
+            height: 35px;
+            transform: rotate(-15deg);
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 50px;
+            border: 2px solid var(--primary-color);
+            border-radius: 15px;
+            opacity: 0.5;
+            transition: opacity 0.3s ease;
+        }
+        
+        .scroll-indicator::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 6px;
+            height: 6px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            animation: scrollDown 2s ease-in-out infinite;
+        }
+        
+        @keyframes scrollDown {
+            0%, 100% {
+                opacity: 1;
+                top: 8px;
+            }
+            50% {
+                opacity: 0.3;
+                top: 25px;
+            }
+        }
+        
+        /* 添加章节底部装饰 */
+        .section-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2rem auto;
+            color: var(--accent-color);
+            font-size: 1rem;
+            opacity: 0.7;
+        }
+        
+        .section-divider::before,
+        .section-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--accent-color);
+            opacity: 0.3;
+            margin: 0 10px;
+        }
+        
+        /* 增强卡片悬停效果 */
+        .info-card:hover {
+            box-shadow: 0 15px 30px rgba(200, 168, 122, 0.2);
+        }
+        
+        .info-card:active {
+            transform: translateY(-3px);
+        }
+        
+        /* 页脚样式 */
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .hero-info {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .content-section {
+                padding: 1.8rem;
+                margin: 2rem 0;
+            }
+
+            .timeline {
+                padding-left: 1.5rem;
+            }
+
+            .timeline-item {
+                padding-left: 1rem;
+            }
+            
+            .intro-text {
+                font-size: 1rem;
+                padding: 1.5rem;
+            }
+            
+            .intro-text::before,
+            .intro-text::after {
+                font-size: 3rem;
+            }
+            
+            .dress-code {
+                padding: 2rem 1.5rem;
+            }
+            
+            .floating-circle,
+            .floating-square {
+                opacity: 0.5;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.7rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .content-section {
+                padding: 1.5rem;
+            }
+            
+            .conclusion-quote {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="floating-elements">
+        <div class="floating-circle"></div>
+        <div class="floating-circle"></div>
+        <div class="floating-circle"></div>
+        <div class="floating-square"></div>
+        <div class="floating-square"></div>
+        <div class="floating-square"></div>
+        <div class="graduation-cap"></div>
+        <div class="graduation-cap"></div>
+        <div class="diploma"></div>
+        <div class="diploma"></div>
+    </div>
+    <div class="scroll-indicator"></div>
+
+    <div class="container">
+        <div class="header-decoration" data-aos="fade-down" data-aos-duration="700">
+            <svg width="100%" height="15" viewBox="0 0 100 15" preserveAspectRatio="none">
+                <path d="M0,0 L50,15 L100,0 L100,15 L0,15 Z" fill="rgba(200, 168, 122, 0.1)"></path>
+            </svg>
+        </div>
+        <header data-aos="fade-down" data-aos-duration="1000">
+            <h1>2025届通班毕业会</h1>
+            <p class="subtitle">青春不散场，友谊永流传</p>
+
+            <div class="hero-info">
+                <div class="info-card" data-aos="zoom-in" data-aos-delay="100">
+                    <h3>📅 活动日期</h3>
+                    <p>7月2日</p>
+                </div>
+                <div class="info-card" data-aos="zoom-in" data-aos-delay="200">
+                    <h3>📍 活动地点</h3>
+                    <p>禄岛</p>
+                </div>
+                <div class="info-card" data-aos="zoom-in" data-aos-delay="300">
+                    <h3>⏰ 活动时间</h3>
+                    <p>17:00-20:30</p>
+                </div>
+                <div class="info-card" data-aos="zoom-in" data-aos-delay="400">
+                    <h3>👥 签到时间</h3>
+                    <p>16:40开始</p>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="content-section" data-aos="fade-up">
+                <h2>活动简介</h2>
+                <p class="intro-text">
+                    回首大学生活，通班给我们带来了无数美好的回忆和珍贵的友谊。2025届通班毕业会将于7月2日在禄岛举行，时间为17:00至20:30。我们诚邀每一位同学和老师参加，共同庆祝这一重要的里程碑。
+                    让我们在这个特殊的夜晚，共同见证青春的华章，开启人生的新篇章。
+                </p>
+            </section>
+            
+            <div class="section-divider">❀</div>
+
+            <section class="content-section" data-aos="fade-up">
+                <h2>活动流程</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-time">16:40 - 17:00</div>
+                        <div class="timeline-title">签到环节</div>
+                        <div class="timeline-desc">所有来宾请在此时间段内完成签到，以便活动顺利开始。</div>
+                        <div class="timeline-poetry">步履轻盈，心海微漾，签名薄上，故事启航。</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">17:00 - 17:40</div>
+                        <div class="timeline-title">致辞环节</div>
+                        <div class="timeline-desc">毕业会的正式环节将由教师代表和学生代表的致辞拉开序幕。</div>
+                        <div class="timeline-poetry">谆谆教诲，字字珠玑，往昔如卷，未来可期。</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">17:40 - 18:00</div>
+                        <div class="timeline-title">赠送礼物 & 合影</div>
+                        <div class="timeline-desc">老师向毕业生们赠送毕业礼物，随后毕业生们身着学士服进行集体合影，留下珍贵的瞬间。</div>
+                        <div class="timeline-poetry">一份珍藏，定格此刻欢笑，镜头虽短，青春不老。</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">18:00 - 18:40</div>
+                        <div class="timeline-title">晚餐时光</div>
+                        <div class="timeline-desc">提供自助餐与蛋糕，让与会者在轻松愉快的氛围中用餐和交流。</div>
+                        <div class="timeline-poetry">觥筹交错，美味当前，举酒属客，共叙情谊。</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">18:40 - 19:00</div>
+                        <div class="timeline-title">精彩演出</div>
+                        <div class="timeline-desc">同学们带来精彩的表演，为晚会增添更多娱乐和节庆气氛。</div>
+                        <div class="timeline-poetry">鼓瑟吹笙，才艺尽展，笑语欢声，青春烂漫。</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">19:00 - 20:30</div>
+                        <div class="timeline-title">自由娱乐</div>
+                        <div class="timeline-desc">舞会、卡拉OK和各种桌游，满足不同兴趣，鼓励与会者进行非正式的互动。</div>
+                        <div class="timeline-poetry">音符流淌，舞步轻扬，或歌或弈，友谊地久天长。</div>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="section-divider">❀</div>
+
+            <section class="content-section" data-aos="fade-up">
+                <h2>着装建议</h2>
+                <div class="dress-code" data-aos="zoom-in" data-aos-delay="200">
+                    <h3>👔 着装要求</h3>
+                    <p>穿你喜欢的衣服就好～若想参与舞会，请穿方便活动的鞋子！</p>
+                    <p><strong>重要提醒:所有毕业生务必携带学士服，以便在集体合影环节中统一着装</strong></p>
+                </div>
+            </section>
+            
+            <div class="section-divider">❀</div>
+
+            <section class="content-section" data-aos="fade-up">
+                <div class="conclusion">
+                    <h2>结语</h2>
+                    <p>经过4年或者5年的学习与成长，我们终于迎来了这场毕业会。它不仅是对过去岁月的回顾，更是对未来旅程的展望。</p>
+                    <p>我们期待这是一场充满欢乐且令人难忘的盛会。</p>
+                    <div class="conclusion-quote">
+                        莫怕前路无人伴，风雨飘摇无知己！
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <div class="section-divider">❀</div>
+            <p>2025届通班毕业会 &copy; 2025</p>
+            <p>期待与您相聚</p>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // 高级交互效果
+        document.addEventListener('DOMContentLoaded', function () {
+            // 初始化AOS动画库 - 修复淡出后不显示的问题，设置once为false
+            AOS.init({
+                duration: 800,
+                easing: 'ease-out',
+                once: false,  // 改为false，使元素可以重复动画
+                offset: 100,  // 添加偏移量让动画更早触发
+                delay: 50     // 添加小延迟使动画更平滑
+            });
+            
+            // 为时间线项目添加滚动动画
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateX(0)';
+                    }
+                });
+            }, {
+                threshold: 0.1,  // 降低阈值使动画更早触发
+                rootMargin: '0px 0px -10% 0px'  // 提前触发观察
+            });
+
+            timelineItems.forEach((item, index) => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateX(-20px)';
+                item.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+                observer.observe(item);
+            });
+
+            // 信息卡片悬停效果
+            const infoCards = document.querySelectorAll('.info-card');
+            infoCards.forEach(card => {
+                card.addEventListener('mouseenter', function () {
+                    this.style.background = 'rgba(200, 168, 122, 0.08)';
+                });
+
+                card.addEventListener('mouseleave', function () {
+                    this.style.background = 'rgba(255, 255, 255, 0.8)';
+                });
+            });
+            
+            // 平滑滚动效果
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId !== '#') {
+                        document.querySelector(targetId).scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // 滚动指示器动画
+            const scrollIndicator = document.querySelector('.scroll-indicator');
+            if (scrollIndicator) {
+                scrollIndicator.addEventListener('click', () => {
+                    window.scrollBy({
+                        top: window.innerHeight / 2,
+                        behavior: 'smooth'
+                    });
+                });
+                
+                // 监听滚动，隐藏滚动指示器
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > window.innerHeight / 3) {
+                        scrollIndicator.style.opacity = '0';
+                    } else {
+                        scrollIndicator.style.opacity = '0.5';
+                    }
+                });
+            }
+            
+            // 修复内容部分的动画
+            const contentSections = document.querySelectorAll('.content-section');
+            contentSections.forEach((section, index) => {
+                // 移除之前可能添加的属性，以便重新设置
+                section.removeAttribute('data-aos');
+                section.removeAttribute('data-aos-delay');
+                
+                // 重新设置动画属性
+                section.setAttribute('data-aos', 'fade-up');
+                section.setAttribute('data-aos-duration', '1000');
+                section.setAttribute('data-aos-delay', `${index * 50}`);
+                section.setAttribute('data-aos-anchor-placement', 'top-bottom');  // 当元素顶部到达视口底部时触发
+            });
+            
+            // 确保AOS始终正常工作，监听滚动事件
+            window.addEventListener('scroll', function() {
+                AOS.refresh();  // 刷新AOS，确保动画正确触发
+            }, { passive: true });
+            
+            // 添加备用方案，防止动画库加载失败
+            if (typeof AOS === 'undefined') {
+                console.warn('AOS没有正确加载，应用备用样式');
+                document.querySelectorAll('[data-aos]').forEach(el => {
+                    el.removeAttribute('data-aos');
+                    el.style.opacity = '1';
+                    el.style.transform = 'none';
+                });
+            }
+            
+            // 如果页面加载后元素仍然不可见，强制显示它们
+            setTimeout(function() {
+                document.querySelectorAll('.content-section').forEach(section => {
+                    if (getComputedStyle(section).opacity < 0.5) {
+                        section.style.opacity = '1';
+                        section.style.transform = 'none';
+                    }
+                });
+            }, 1500);
+        });
+    </script>
+</body>
+
+</html>
